@@ -1,48 +1,40 @@
-import React from 'react';
 import './App.css';
+import Accordion from './Components/Accordion/Accordion';
+import Rating from './Components/Rating/Rating';
 
 function App() {
 
   return (
     <div>
-      <div className='alert bg-dark text-white text-center'>
-      <h1>This is App header</h1>
-      </div>
+      <PageTitle title={'This page is App Header'} />
       <div className='container'>
-    <Rating/>
-    <Accordion/>       
+      {/* <img className='img-thumbnail' src="https://klike.net/uploads/posts/2019-07/1562069947_1.jpg"/> */}
+        <h2>Article 1</h2>
+          <Rating value={1} />
+        <h2>Article 2</h2>
+          <Rating value={2}/>
+        <h2>Article 3</h2>
+          <Rating value={3}/>  
+          <h2>Article 4</h2>
+          <Rating value={4}/>
+        <h2>Article 5</h2>
+          <Rating value={5}/>  
+    <Accordion title={"Accordion App"} collapsed={true}/>    
+    <Accordion title={"Accordion User"} collapsed={false}/> 
       </div>
-
     </div>
   );
 
 }
 
-function Rating(){
-  return (
-    <div>
-      <Star/>
-      <Star/>
-      <Star/>
-    </div>
-  )
+type PageTitlePropsType = {
+  title:string
 }
 
-function Star(){
+function PageTitle (props:PageTitlePropsType){
   return (
-      <div>star</div>
-  )
-}
-
-function Accordion(){
-  return(
-    <div>
-      <h3>Menu:</h3>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
+    <div className='alert bg-dark text-white text-center'>
+      <h1>{props.title}</h1>
     </div>
   )
 }

@@ -9,21 +9,21 @@ function App() {
     <div>
       <PageTitle title={'This page is App Header'} />
       <div className='container'>
-        {/* <h2>Article 1</h2>
-          <Rating value={1} />
-        <h2>Article 2</h2>
+        <h2>Article 1</h2>
+          <Rating />
+        {/* <h2>Article 2</h2>
           <Rating value={2}/>
         <h2>Article 3</h2>
           <Rating value={3}/>  
           <h2>Article 4</h2>
           <Rating value={4}/>
         <h2>Article 5</h2>
-          <Rating value={5}/>  
-    <Accordion title={"Accordion App"} collapsed={true}/>    
-    <Accordion title={"Accordion User"} collapsed={false}/>  */}
+          <Rating value={5}/>   */}
+    <Accordion title={"Accordion App"}/>    
+    <Accordion title={"Accordion User"}/> 
+    {/* <OnOff />
     <OnOff />
-    <OnOff />
-    <OnOff />
+    <OnOff /> */}
       </div>
     </div>
   );

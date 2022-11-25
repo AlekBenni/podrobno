@@ -19,14 +19,9 @@ function Rating(){
   }
 
   function Star(props:StartPropsType){
-    if(props.selected === true){
         return (
-            <span><b>star </b></span>
+            <>{props.selected ? <b className="me-1">star </b> : <span className="me-2">star</span>}</>
         )
-    }else
-    return (
-        <span>star </span>
-    )
   }
 
   export default Rating;

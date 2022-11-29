@@ -4,7 +4,9 @@ import { useState } from "react";
 function Rating(){
   let [value, setValue] = useState(0);
   return (
+    
     <div className="border border-3 border-danger rounded p-3">
+    <h1>Say Hello!</h1>  
       <Star selected={value > 0} /><button onClick={() => {setValue(1)}} type="button" className="btn btn-success me-3">+</button>
       <Star selected={value >1} /><button onClick={() => {setValue(2)}} type="button" className="btn btn-success me-3">+</button>
       <Star selected={value >2} /><button onClick={() => {setValue(3)}} type="button" className="btn btn-success me-3">+</button>
